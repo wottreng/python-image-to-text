@@ -11,6 +11,7 @@ pathToImage = f"{os.getcwd()}/someImage.png"
 # need to run only once to load model into memory
 # if you dont have the pretrained models easyOCR will fetch them with 'download_enabled'
 reader = Reader(['en'], gpu=False, model_storage_directory=f"{os.getcwd()}/.EasyOCR/",download_enabled=True)
+#here is where the work is done:
 result = reader.readtext(pathToImage)
 print(result)
 print("-------------")
